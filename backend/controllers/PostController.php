@@ -241,4 +241,9 @@ class PostController extends Controller
         }
     }
 
+    public function actionDelete()
+    {
+        die('123');
+    }
+
 }
