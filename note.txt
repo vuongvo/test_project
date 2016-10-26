@@ -1,0 +1,39 @@
+yii migrate
+yii migrate/create tbl_products
+http://www.bsourcecode.com/yiiframework2/select-query-model/
+
+cd postgresql-9.2.3
+
+sudo -u postgres psql
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCopzSXDsNrJQ8CKkB4g60vle4nqo3DvpUxZnKQA+jm6lZMpvAQ2cks4DWRTT1xYCTn9BycL4YDrHiFlPpB6oD5ulkoWwaFgIcZMR6Gi1bkqlntxU2Dl8RRhNoJXQBuGdc68Zm4PZ5VIUYOWJbQyL3Xm4bkZExyaNQENBRTXShmmi0HtOkMNdCUE9gur8ze29RH+sJBPQWtSkQvBsXuBXvTeZm8j+6fdSjyzR4b1smzDAgXKkGanuQv9evAk3ZU4TCOFfPSB2hC8fhYG6xvRZ0+sfH+4zzk6c7J6jpMDzOljAGs2wWeXqdb41z6NquKo70KLAFTTdas7dCX8AWvBq5 vuongvt@rikkeisoft.com
+
+in table order : 5 ki tu store_code dau tien-> order_code
+
+
+
+<div class="col-md-8 pull-right" style="font-size:120%">
+                            <?php
+                                $name = Yii::$app->request->get('name')? Yii::$app->request->get('name') : '';
+                                $start_date = Yii::$app->request->get('start_date') ? Yii::$app->request->get('start_date') : '';
+                                $end_date = Yii::$app->request->get('end_date') ? Yii::$app->request->get('end_date') : '';
+                            ?>
+                            <?php if ($countpage > 1 ) { ?>
+                            <?php $position = $offset/$limit + 1 ; ?>
+                            <?php var_dump($position); ?>
+                            <?php if ($position != 1) { 
+                                 $Y = $offset-$limit;?>
+                                <a style="margin-right:1%" href="<?php echo Url::base(TRUE).'/tickethistory/index?offset='.$Y.'&page='.$countpage.'&store_name='.$name.'&start_date='.$start_date.'&end_date='.$end_date.'&submit='?>"><b>◀ 前へ</b></a>
+                            <?php } ?>
+                            <?php echo (($offset/$limit) + 1).'/'.$countpage .'ページ'?>
+                            <?php // if ($position != $countpage) {  
+                                   // $Y = $offset + $limit;  ?>
+                                <a 
+                                <?php if ($position != $countpage) { ?>
+                                <?php $Y = $offset + $limit ;  ?>
+                                <?php echo "class='next'" ?>
+                                <?php } ?> 
+                                 style="margin-left:1%" href="<?php echo Url::base(TRUE).'/tickethistory/index?offset='.$Y.'&page='.$countpage.'&store_name='.$name.'&start_date='.$start_date.'&end_date='.$end_date.'&submit='?>" >次へ ▶
+                                 </a>
+                        <?php } ?>  
+                        </div>
