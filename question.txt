@@ -1,0 +1,32 @@
+Em có một số câu hỏi ở phần Ticket History và phần StoreCustomer như sau :
+I . phần Ticket History
+     Màn hình Lich Sử Ticket (Chi tiết)  3.12.2. 回数券履歴(詳細)
+
+* field 内容 (nội dung) ( 7 ) : sẽ lấy từ table nào.
+
+* field  残り回数  (ticket_blance)  (4) :  lấy từ table ticket_history có chính xác không
+
+*  field  残高の変動数 (số dư biến động) (8) sẽ tính từ table nào 
+
+II . phần Lich Sử Của hàng của customer 
+  1.Màn Hình  Danh Sách của hàng  3.14. お気に入り店舗
+
+* field  定休日 (ngày nghỉ định kỳ ) (10) sẽ được hiển thị như thế nào
+-   màn hình mẫu hiển thi : 毎週○曜日、毎月第△○曜日
+-  dữ liệu trong database  : 2016-02-02
+
+2. Màn hình Chi Tiết  Danh Sách của hàng (3.14.2. お気に入り店舗(詳細)
+
+*field (テンポメイ) (tenpomai)(2) : được lấy từ table nào
+
+*field (スタッフ情報詳細)(chi tiết thông tin staff ) (9) các thông tin :
+ 	title_self_introduction
+	 2 image nhỏ
+	hình ảnh đắc y
+	 skill đắc ý
+	thú vui …
+được lấy từ table nào
+
+*field (アクセス・道案内)Access-hướng dẫn đường đi(10) sẽ hiển thị như thế nào ….
+  
+
